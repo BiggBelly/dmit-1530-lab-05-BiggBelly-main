@@ -26,9 +26,379 @@ body {
     left: -9999px;
 }
 
+.flex{
+display: flex;
+align-items:center;
+}
+
+.btn{
+ background-color: var(--accent);
+ color: var(--dark);
+ text-decoration: none;
+ text-transform: lowercase;
+  white-space: nowrap;
+  display: inline-block;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+   transition: 0.4s all ease-in-out; 
+}
+
+.btn:hover{
+background-color: var(--hover);
+}
+
 /* Typography */
 
 h1 {
+    color: var(--white);
     font-family: 'Hurricane', cursive;
+    font-size:4rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
 }
 
+h2,h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+
+/* Header */
+
+header{
+    background-color: var(--pop);
+    padding: 0.5rem;
+    position: sticky;
+    z-index: 1;
+    top: -6.5rem;
+}
+
+.tagline{
+    color: var(--white);
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav{
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    color: var(--white);
+    cursor: pointer;
+}
+
+.sign-in li:first-of-type{
+ margin-right: 1rem;
+}
+
+/* Hero Banner */
+
+.hero{
+    color: var(--white);
+    background: url(../img/hero.webp) center /cover;
+}
+
+.hero .flex {
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: calc(100vh - 10rem);
+    padding: 1rem;
+}
+
+.hero h2{
+    font-size: calc(2rem + 5vw);
+    font-weight: 200;
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.hero h2 span{
+    display: block;
+    padding-left: 4rem;
+}
+.hero p {
+   font-size: 1.4rem;
+   line-height: 1.2;
+   max-width: 40ch;
+   margin-bottom: 2rem;
+}
+/* To do : In our media Query- get the H2 to stop growing */
+
+/* Parallex */
+
+.parallex {
+    background:url('../img/splash-mobile.webp') center / cover no-repeat fixed;
+}
+
+.parallex .inner-container{
+    align-items:flex-end ;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.parallex .inner-container * {
+    padding: 1rem;
+    width: 60%;
+}
+
+/* Custom Order Form */
+
+.custom {
+    background: url('../img/gift-box.webp') center / cover no-repeat;
+    color: var(--white);
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.custom h2,
+.scroll>h2{
+    font-size: 4rem;
+    font-weight: 200;
+    line-height: 1;
+    margin: 4rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.custom h2,
+.custom p {
+    margin-bottom: 1rem;
+}
+
+.custom .inner-container>p:last-of-type{
+     margin-bottom: 3rem; 
+}
+
+.custom a {
+ color: var(--white);
+}
+
+.custom form {
+ background-color: rgba(0,0,0,0.25);
+ backdrop-filter: blur(5px);
+ border-radius: 5px;
+ padding: 2rem;
+}
+
+.custom fieldset {
+ border: 0;
+ padding: 0;
+}
+
+.custom legend {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+}
+.custom fieldset div{
+    margin-bottom: 1rem;
+}
+
+.custom label:not(input[type="checkbox"] ~ label){
+     display: block; 
+} 
+.custom select,
+.custom input:not([type="checkbox"]),
+.custom textarea {
+    height: 2rem;
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+p.help{
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.custom textarea {
+    max-height: 12rem;
+    min-height: 6rem;
+    resize: vertical;
+}
+
+.custom form > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.custom input[type="submit"] {
+    height: 3rem;
+    max-width: 14rem;
+    border: none;
+    cursor: pointer;
+}
+/* Horizontal Scroll */
+
+.scroll {
+    padding: 3rem 0 6rem 0;
+}
+.scrolling-wrapper {
+   scrollbar-color: var(--accent) #e2e2e2;
+    scrollbar-width: thin;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+   /*  white-space: nowrap; */
+ 
+  
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+   height: 0.5rem;
+
+}
+
+.scrolling-wrapper::-webkit-scrollbar-track{
+ background-color: #e2e2e2;
+}
+
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.card {
+    background-color: #fff;
+    flex: 0 0 24rem;
+    height: 40rem;
+    margin: 1rem 1rem 2rem 1rem;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.category {
+    color: var(--pop);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.description {
+    text-align: left;
+    white-space: normal;
+}
+
+.card .btn{
+    bottom: 1.5rem;
+    left:1.5rem;
+    right: 1.5rem;
+    position: absolute;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--pop);
+    color: var(--white);
+    padding: 3rem 2rem;
+}
+
+footer .inner-container div * {
+   margin-bottom: 1rem;
+}
+
+footer form input[type="email"] {
+    border: none;
+    flex: 1 0 auto;
+    height: 2.25rem;
+    padding: 0.25rem;
+}
+
+
+footer form input[type="submit"] {
+    border: none;
+    background-color: var(--accent);
+    cursor: pointer;
+    height: 2.25rem;
+    margin: 0;
+    padding: 0 0.5rem;
+    transition: 0.4s all ease-in-out;
+}
+
+
+footer form input[type="submit"] {
+   background-color: var(--hover);
+}
+
+
+
+footer nav {
+    padding: 2rem 0;
+}
+
+footer nav h3 {
+    color: var(--hover);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+footer a{
+    color: var(--white);
+}
+
+footer .disclaimer {
+    font-size: 0.8rem;
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+footer .disclaimer p {
+    margin-top: 1rem;
+}
+ 
+@media screen and (min-width:50rem) {
+
+   .hero h2 {
+    font-size: 6.5rem;
+   }
+
+   .parallex {
+    background: url('../img/splash.webp') center / cover 
+    no-repeat fixed;
+   }
+
+   .parallex .inner-container *{
+        padding: 0.5rem 2rem 0.5rem 1rem;
+        width: 50%;
+   }
+
+    .wide-flex {
+        display: flex;
+        justify-content: space-between;
+   }
+
+    .custom .wide-flex div {
+        flex-basis:  49%;
+   }
+
+   footer div.inner-container {
+    align-items: center;
+    display: flex;
+   }
+
+   footer .newsletter-info,
+   footer form {
+    width: 48%;
+   } 
+}
